@@ -124,6 +124,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BinarySerializer.cpp" />
     <ClCompile Include="INF_lab_4.cpp" />
     <ClCompile Include="Lexer.cpp" />
     <ClCompile Include="Parser.cpp" />
@@ -132,6 +133,7 @@
     <None Include="jsons\Schedule.json" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BinarySerializer.h" />
     <ClInclude Include="Lexer.h" />
     <ClInclude Include="Parser.h" />
     <ClInclude Include="Token.h" />

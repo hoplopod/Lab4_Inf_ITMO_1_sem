@@ -1,4 +1,7 @@
+#include <stdexcept>
+
 #include "Parser.h"
+
 
 const Token& Parser::shift() 
 {

@@ -1,13 +1,15 @@
 ﻿#include <iostream>
 #include <fstream>
-#include <string>
-#include <stdexcept>
 
 #include "Lexer.h"
 #include "Parser.h"
+#include "BinarySerializer.h"
 
 const std::string FILE_NAME = "Schedule.json";
 const std::string FILE_PATH = "jsons/" + FILE_NAME;
+
+const std::string BIN_FILE_NAME = "schedule.bin";
+const std::string BIN_FILE_PATH = "bins/" + BIN_FILE_NAME;
 
 std::string get_file_data() {
 	std::ifstream file(FILE_PATH, std::ios::binary | std::ios::ate);
@@ -39,8 +41,9 @@ int main() {
 		auto tokens = lexer.tokenize();
 
 		Parser parser(tokens);
-		parser.parse();
+		auto vaule = parser.parse();
 
+		BinarySerializer::save(vaule, BIN_FILE_PATH);
 	}
 	catch (const std::exception& e) { std::cerr << e.what() << "\n"; }
 }

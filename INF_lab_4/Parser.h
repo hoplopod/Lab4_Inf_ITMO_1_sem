@@ -2,7 +2,6 @@
 
 #include <vector>
 #include <string>
-#include <stdexcept>
 
 #include "Token.h"
 #include "Value.h"

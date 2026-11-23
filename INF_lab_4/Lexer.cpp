@@ -1,3 +1,5 @@
+#include <stdexcept>
+
 #include "Lexer.h"
 
 std::vector<Token> Lexer::tokenize()
@@ -108,7 +110,7 @@ Token Lexer::readNumber()
 
 Token Lexer::readKeyword(const std::string& kw, TokenType type)
 {
-    if (src.compare(pos, kw.size(), kw) != 0 || pos == src.size() || !std::isalnum(static_cast<unsigned char>(src[pos + kw.size()]))) {
+    if (src.compare(pos, kw.size(), kw) != 0 || (pos + kw.size() < src.size() && std::isalnum(static_cast<unsigned char>(src[pos + kw.size()])))) {
         throw std::runtime_error("Invalid keyword at line" + std::to_string(line));
     }
 
