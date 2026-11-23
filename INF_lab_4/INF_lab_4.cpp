@@ -3,6 +3,8 @@
 #include <string>
 #include <stdexcept>
 
+#include "Value.h"
+
 const std::string FILE_NAME = "Schedule.json";
 const std::string FILE_PATH = "jsons/" + FILE_NAME;
 

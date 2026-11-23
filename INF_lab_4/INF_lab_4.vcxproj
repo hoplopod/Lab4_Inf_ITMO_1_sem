@@ -129,6 +129,9 @@
   <ItemGroup>
     <None Include="jsons\Schedule.json" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Value.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
