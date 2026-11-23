@@ -3,8 +3,8 @@
 #include <string>
 #include <stdexcept>
 
-#include "Value.h"
 #include "Lexer.h"
+#include "Parser.h"
 
 const std::string FILE_NAME = "Schedule.json";
 const std::string FILE_PATH = "jsons/" + FILE_NAME;
@@ -38,7 +38,9 @@ int main() {
 		Lexer lexer(data);
 		auto tokens = lexer.tokenize();
 
-		std::cout << tokens.size();
+		Parser parser(tokens);
+		parser.parse();
+
 	}
 	catch (const std::exception& e) { std::cerr << e.what() << "\n"; }
 }

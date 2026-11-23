@@ -126,12 +126,14 @@
   <ItemGroup>
     <ClCompile Include="INF_lab_4.cpp" />
     <ClCompile Include="Lexer.cpp" />
+    <ClCompile Include="Parser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="jsons\Schedule.json" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Lexer.h" />
+    <ClInclude Include="Parser.h" />
     <ClInclude Include="Token.h" />
     <ClInclude Include="Value.h" />
   </ItemGroup>
