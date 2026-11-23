@@ -18,6 +18,9 @@
     <ClCompile Include="INF_lab_4.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Lexer.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="jsons\Schedule.json">
@@ -26,6 +29,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Value.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Lexer.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Token.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

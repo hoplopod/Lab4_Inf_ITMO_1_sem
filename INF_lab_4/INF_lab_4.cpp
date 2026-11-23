@@ -4,6 +4,7 @@
 #include <stdexcept>
 
 #include "Value.h"
+#include "Lexer.h"
 
 const std::string FILE_NAME = "Schedule.json";
 const std::string FILE_PATH = "jsons/" + FILE_NAME;
@@ -33,7 +34,11 @@ std::string get_file_data() {
 int main() {
 	try {
 		auto data = get_file_data();
-		std::cout << data;
+		
+		Lexer lexer(data);
+		auto tokens = lexer.tokenize();
+
+		std::cout << tokens.size();
 	}
 	catch (const std::exception& e) { std::cerr << e.what() << "\n"; }
 }
