@@ -10,3 +10,5 @@ Release/
 *.ilk
 *.exe
 *.bin
+*.xml
+*.ini

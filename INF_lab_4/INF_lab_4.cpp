@@ -4,12 +4,13 @@
 #include "Lexer.h"
 #include "Parser.h"
 #include "BinarySerializer.h"
+#include "XmlSerializer.h"
+#include "IniSerializer.h"
 
 const std::string FILE_NAME = "Schedule.json";
 const std::string FILE_PATH = "jsons/" + FILE_NAME;
 
-const std::string BIN_FILE_NAME = "schedule.bin";
-const std::string BIN_FILE_PATH = "bins/" + BIN_FILE_NAME;
+const std::string END_FILE_NAME = "schedule";
 
 std::string get_file_data() {
 	std::ifstream file(FILE_PATH, std::ios::binary | std::ios::ate);
@@ -43,7 +44,10 @@ int main() {
 		Parser parser(tokens);
 		auto vaule = parser.parse();
 
-		BinarySerializer::save(vaule, BIN_FILE_PATH);
+		BinarySerializer::save(vaule, END_FILE_NAME + ".bin");
+		XmlSerializer::save(vaule, END_FILE_NAME + ".xml");
+		IniSerializer::save(vaule, END_FILE_NAME + ".ini");
+
 	}
 	catch (const std::exception& e) { std::cerr << e.what() << "\n"; }
 }

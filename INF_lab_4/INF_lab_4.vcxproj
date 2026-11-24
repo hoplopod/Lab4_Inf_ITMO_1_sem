@@ -126,18 +126,22 @@
   <ItemGroup>
     <ClCompile Include="BinarySerializer.cpp" />
     <ClCompile Include="INF_lab_4.cpp" />
+    <ClCompile Include="IniSerializer.cpp" />
     <ClCompile Include="Lexer.cpp" />
     <ClCompile Include="Parser.cpp" />
+    <ClCompile Include="XmlSerializer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="jsons\Schedule.json" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinarySerializer.h" />
+    <ClInclude Include="IniSerializer.h" />
     <ClInclude Include="Lexer.h" />
     <ClInclude Include="Parser.h" />
     <ClInclude Include="Token.h" />
     <ClInclude Include="Value.h" />
+    <ClInclude Include="XmlSerializer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
